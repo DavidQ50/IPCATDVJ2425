@@ -1,0 +1,53 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\fonte\\OneDrive - Instituto Polit\u00E9cnico do C\u00E1vado e do Ave\\ipca\\Tecnica de desenvolvimento de videojogos\\GitHub\\IPCATDVJ2425\\FirstProject\\Sokoban\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{6CC51FC7-2E75-412C-901F-590A779BF429}|Sokoban.csproj|c:\\users\\fonte\\onedrive - instituto polit\u00E9cnico do c\u00E1vado e do ave\\ipca\\tecnica de desenvolvimento de videojogos\\github\\ipcatdvj2425\\firstproject\\sokoban\\game1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6CC51FC7-2E75-412C-901F-590A779BF429}|Sokoban.csproj|solutionrelative:game1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6CC51FC7-2E75-412C-901F-590A779BF429}|Sokoban.csproj|c:\\users\\fonte\\onedrive - instituto polit\u00E9cnico do c\u00E1vado e do ave\\ipca\\tecnica de desenvolvimento de videojogos\\github\\ipcatdvj2425\\firstproject\\sokoban\\content\\file.spritefont||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{6CC51FC7-2E75-412C-901F-590A779BF429}|Sokoban.csproj|solutionrelative:content\\file.spritefont||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "File.spritefont",
+              "DocumentMoniker": "C:\\Users\\fonte\\OneDrive - Instituto Polit\u00E9cnico do C\u00E1vado e do Ave\\ipca\\Tecnica de desenvolvimento de videojogos\\GitHub\\IPCATDVJ2425\\FirstProject\\Sokoban\\Content\\File.spritefont",
+              "RelativeDocumentMoniker": "Content\\File.spritefont",
+              "ToolTip": "C:\\Users\\fonte\\OneDrive - Instituto Polit\u00E9cnico do C\u00E1vado e do Ave\\ipca\\Tecnica de desenvolvimento de videojogos\\GitHub\\IPCATDVJ2425\\FirstProject\\Sokoban\\Content\\File.spritefont",
+              "RelativeToolTip": "Content\\File.spritefont",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAABMAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-03-03T12:43:48.749Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Game1.cs",
+              "DocumentMoniker": "C:\\Users\\fonte\\OneDrive - Instituto Polit\u00E9cnico do C\u00E1vado e do Ave\\ipca\\Tecnica de desenvolvimento de videojogos\\GitHub\\IPCATDVJ2425\\FirstProject\\Sokoban\\Game1.cs",
+              "RelativeDocumentMoniker": "Game1.cs",
+              "ToolTip": "C:\\Users\\fonte\\OneDrive - Instituto Polit\u00E9cnico do C\u00E1vado e do Ave\\ipca\\Tecnica de desenvolvimento de videojogos\\GitHub\\IPCATDVJ2425\\FirstProject\\Sokoban\\Game1.cs",
+              "RelativeToolTip": "Game1.cs",
+              "ViewState": "AgIAADAAAAAAAAAAAAA+wDwAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-03T12:45:51.863Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
