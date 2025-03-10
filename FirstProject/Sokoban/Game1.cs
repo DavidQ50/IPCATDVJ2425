@@ -16,7 +16,7 @@ public class Game1 : Game
     private char[,] level;
     private Texture2D player, dot, box, wall; //Load images Texture 
     int tileSize = 64; //potencias de 2 (operações binárias)
-
+    private Player sokoban;
 
     public Game1()
     {
@@ -28,11 +28,13 @@ public class Game1 : Game
     protected override void Initialize()
     {
         // TODO: Add your initialization logic here
+        LoadLevel("level1.txt");
+
         _graphics.PreferredBackBufferHeight = tileSize * level.GetLength(1); //definição da altura
         _graphics.PreferredBackBufferWidth = tileSize * level.GetLength(0); //definição da largura
         _graphics.ApplyChanges(); //aplica a atualização da janela
         
-        LoadLevel("level1.txt");
+        
 
         base.Initialize();
     }
@@ -79,9 +81,9 @@ public class Game1 : Game
 
                 switch (level[x, y])
                 {
-                    case 'Y':
-                        _spriteBatch.Draw(player, position, Color.White);
-                        break;
+                    //case 'Y':
+                    //      _spriteBatch.Draw(player, position, Color.White);
+                    //      break;
                     case '#':
                         _spriteBatch.Draw(box, position, Color.White);
                         break;
@@ -92,6 +94,10 @@ public class Game1 : Game
                         _spriteBatch.Draw(wall, position, Color.White);
                         break;
                 }
+
+                position.X = sokoban.Position.X * tileSize; //posição do Player
+                position.Y = (sokoban.Position.Y) * tileSize; //posição do Player
+                _spriteBatch.Draw(player, position, Color.White); //desenha o Player
             }
         }
 
@@ -113,7 +119,18 @@ public class Game1 : Game
         {
             for (int y = 0; y < nrLinhas; y++)
             {
-                level[x, y] = linhas[y][x];
+                if (linhas[y][x] == 'Y')
+                {
+                    sokoban = new Player(x, y);
+                    level[x, y] = ' '; // put a blank instead of the sokoban 'Y'
+                }
+                else
+                {
+                    level[x, y] = linhas[y][x];
+                }
+
+
+
             }
         }
 
