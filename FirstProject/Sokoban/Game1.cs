@@ -1,6 +1,7 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
+using System.Collections.Generic;
 using System.IO;
 
 namespace Sokoban;
@@ -13,10 +14,13 @@ public class Game1 : Game
     private int nrLinhas = 0;
     private int nrColunas = 0;
     private SpriteFont font; // Variavel de fonte de texto
-    private char[,] level;
+    //private char[,] level;
+    public char[,] level;
+
     private Texture2D player, dot, box, wall; //Load images Texture 
     int tileSize = 64; //potencias de 2 (operações binárias)
     private Player sokoban;
+    public List<Point> boxes;
 
     public Game1()
     {
@@ -57,6 +61,8 @@ public class Game1 : Game
     {
         if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
             Exit();
+        sokoban.Update(gameTime);
+
 
         // TODO: Add your update logic here
 
@@ -78,15 +84,16 @@ public class Game1 : Game
             {
                 position.X = x * tileSize; // define o position
                 position.Y = y * tileSize; // define o position
-
+                
+                // Leitura a partir da matriz
                 switch (level[x, y])
                 {
                     //case 'Y':
                     //      _spriteBatch.Draw(player, position, Color.White);
                     //      break;
-                    case '#':
-                        _spriteBatch.Draw(box, position, Color.White);
-                        break;
+                    //case '#':
+                    //    _spriteBatch.Draw(box, position, Color.White);
+                    //    break;
                     case '.':
                         _spriteBatch.Draw(dot, position, Color.White);
                         break;
@@ -95,6 +102,15 @@ public class Game1 : Game
                         break;
                 }
 
+                // Leitura a partir da Lista boxes
+                foreach (Point b in boxes)
+                {
+                    position.X = b.X * tileSize;
+                    position.Y = b.Y * tileSize;
+                    _spriteBatch.Draw(box, position, Color.White);
+                }
+                
+                // Leitura a partir da classe Player
                 position.X = sokoban.Position.X * tileSize; //posição do Player
                 position.Y = (sokoban.Position.Y) * tileSize; //posição do Player
                 _spriteBatch.Draw(player, position, Color.White); //desenha o Player
@@ -109,6 +125,7 @@ public class Game1 : Game
 
     void LoadLevel(string levelFile)
     {
+        boxes = new List<Point>();
         string[] linhas = File.ReadAllLines($"Content/{levelFile}");  // "Content/" + level
         nrLinhas = linhas.Length;
         nrColunas = linhas[0].Length;
@@ -119,9 +136,15 @@ public class Game1 : Game
         {
             for (int y = 0; y < nrLinhas; y++)
             {
-                if (linhas[y][x] == 'Y')
+                if (linhas[y][x] == '#')
                 {
-                    sokoban = new Player(x, y);
+                    boxes.Add(new Point(x, y));
+                    level[x, y] = ' '; // put a blank instead of the box '#'
+
+                }
+                else if (linhas[y][x] == 'Y')
+                {
+                    sokoban = new Player(this, x, y);
                     level[x, y] = ' '; // put a blank instead of the sokoban 'Y'
                 }
                 else
@@ -135,5 +158,23 @@ public class Game1 : Game
         }
 
     }
+    public bool HasBox(int x, int y) // x e y é a posição do Player
+    {
+        foreach (Point b in boxes)
+        {
+            if (b.X == x && b.Y == y) return true; // se a caixa tiver a mesma posição do Player
+        }
+        return false;
+    }
+
+    public bool FreeTile(int x, int y)
+    {
+        if (level[x, y] == 'X') return false;  // se for uma parede está ocupada
+        if (HasBox(x, y)) return false; // verifica se é uma caixa
+        return true;
+
+        /* The same as:    return level[x,y] != 'X' && !HasBox(x,y);   */
+    }
+
 
 }
