@@ -36,10 +36,10 @@ namespace Sokoban
             {
                 Point lastPosition = position;
                 keysReleased = false;
-                if (kState.IsKeyDown(Keys.A)) position.X--;
-                else if (kState.IsKeyDown(Keys.W)) position.Y--;
-                else if (kState.IsKeyDown(Keys.S)) position.Y++;
-                else if (kState.IsKeyDown(Keys.D)) position.X++;
+                if ((kState.IsKeyDown(Keys.A)) || (kState.IsKeyDown(Keys.Left))) position.X--;
+                else if ((kState.IsKeyDown(Keys.W)) || (kState.IsKeyDown(Keys.Up))) position.Y--;
+                else if ((kState.IsKeyDown(Keys.S)) || (kState.IsKeyDown(Keys.Down))) position.Y++;
+                else if ((kState.IsKeyDown(Keys.D)) || (kState.IsKeyDown(Keys.Right))) position.X++;
                 else keysReleased = true;
 
                 // destino é caixa?
@@ -79,7 +79,9 @@ namespace Sokoban
             else
             {
                 if (kState.IsKeyUp(Keys.A) && kState.IsKeyUp(Keys.W) &&
-                    kState.IsKeyUp(Keys.S) && kState.IsKeyUp(Keys.D))
+                    kState.IsKeyUp(Keys.S) && kState.IsKeyUp(Keys.D) &&
+                    kState.IsKeyUp(Keys.Left) && kState.IsKeyUp(Keys.Right) &&
+                    kState.IsKeyUp(Keys.Up) && kState.IsKeyUp(Keys.Down))
                 {
                     keysReleased = true;
                 }

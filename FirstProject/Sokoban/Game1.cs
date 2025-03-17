@@ -61,10 +61,12 @@ public class Game1 : Game
     {
         if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
             Exit();
+
+        if (Keyboard.GetState().IsKeyDown(Keys.R)) Initialize();
+
+        if (Victory()) Exit(); // FIXME: Change current level
+        
         sokoban.Update(gameTime);
-
-
-        // TODO: Add your update logic here
 
         base.Update(gameTime);
     }
@@ -75,7 +77,7 @@ public class Game1 : Game
 
         // TODO: Add your drawing code here
         _spriteBatch.Begin();
-        //_spriteBatch.DrawString(font, "O texto que quiser", new Vector2(100, 100), Color.White);
+        _spriteBatch.DrawString(font, "O texto que quiser", new Vector2(10, 10), Color.White);
         //_spriteBatch.DrawString(font, "O texto que quiser", new Vector2(100, 300), Color.Black);
         Rectangle position = new Rectangle(0, 0, tileSize, tileSize); //calculo do retangulo a depender do tileSize
         for (int x = 0; x < level.GetLength(0); x++)  //pega a primeira dimensão
@@ -152,11 +154,9 @@ public class Game1 : Game
                     level[x, y] = linhas[y][x];
                 }
 
-
-
             }
-        }
 
+        }
     }
     public bool HasBox(int x, int y) // x e y é a posição do Player
     {
@@ -176,5 +176,13 @@ public class Game1 : Game
         /* The same as:    return level[x,y] != 'X' && !HasBox(x,y);   */
     }
 
+    public bool Victory()
+    {
+        foreach (Point b in boxes) // pecorrer a lista das caixas
+        {
+            if (level[b.X, b.Y] != '.') return false; // verifica se há caixas sem pontos
+        }
+        return true;
+    }
 
 }
