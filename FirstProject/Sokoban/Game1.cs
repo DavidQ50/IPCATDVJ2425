@@ -6,6 +6,10 @@ using System.IO;
 
 namespace Sokoban;
 
+public enum Direction
+{
+    Up, Down, Left, Right // 0, 1, 2, 3
+}
 public class Game1 : Game
 {
     private GraphicsDeviceManager _graphics;
@@ -17,10 +21,14 @@ public class Game1 : Game
     //private char[,] level;
     public char[,] level;
 
-    private Texture2D player, dot, box, wall; //Load images Texture 
+    //private Texture2D player, dot, box, wall; //Load images Texture
+    private Texture2D dot, box, wall; //Load images Texture 
+    private Texture2D[] player;
+    //
     int tileSize = 64; //potencias de 2 (operações binárias)
     private Player sokoban;
     public List<Point> boxes;
+    public Direction direction = Direction.Down;
 
     public Game1()
     {
@@ -48,7 +56,14 @@ public class Game1 : Game
         _spriteBatch = new SpriteBatch(GraphicsDevice);
         
         font = Content.Load<SpriteFont>("File"); //Use the name of sprite font file ('File')
-        player = Content.Load<Texture2D>("Character4");
+        //player = Content.Load<Texture2D>("Character4");
+        player = new Texture2D[4];
+        player[(int)Direction.Down] = Content.Load<Texture2D>("Character4");
+        player[(int)Direction.Up] = Content.Load<Texture2D>("Character7");
+        player[(int)Direction.Left] = Content.Load<Texture2D>("Character1");
+        player[(int)Direction.Right] = Content.Load<Texture2D>("Character2");
+
+
         dot = Content.Load<Texture2D>("EndPoint_Blue");
         box = Content.Load<Texture2D>("Crate_Brown");
         wall = Content.Load<Texture2D>("Wall_Brown");
@@ -115,7 +130,9 @@ public class Game1 : Game
                 // Leitura a partir da classe Player
                 position.X = sokoban.Position.X * tileSize; //posição do Player
                 position.Y = (sokoban.Position.Y) * tileSize; //posição do Player
-                _spriteBatch.Draw(player, position, Color.White); //desenha o Player
+                //_spriteBatch.Draw(player, position, Color.White); //desenha o Player
+                _spriteBatch.Draw(player[(int)direction], position, Color.White); //desenha o Player
+
             }
         }
 
