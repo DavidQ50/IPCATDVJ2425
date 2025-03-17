@@ -8,10 +8,10 @@ using System.Threading.Tasks;
 
 namespace Sokoban
 {
-    public enum Direction
-    {
-        Up, Down, Left, Right // 0, 1, 2, 3
-    }
+    //public enum Direction
+    //{
+    //    Up, Down, Left, Right // 0, 1, 2, 3
+    //}
 
     class Player
     {
@@ -22,7 +22,7 @@ namespace Sokoban
 
         private Game1 game; //reference from Game1 to Player
         private bool keysReleased = true;
-        public Direction direction = Direction.Down;
+        //public Direction direction = Direction.Down;
 
         //public Point Position
         //{
