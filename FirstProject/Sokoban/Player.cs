@@ -1,5 +1,7 @@
 ﻿using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
+using SharpDX.Direct3D9;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,10 +10,10 @@ using System.Threading.Tasks;
 
 namespace Sokoban
 {
-    //public enum Direction
-    //{
-    //    Up, Down, Left, Right // 0, 1, 2, 3
-    //}
+    public enum Direction
+    {
+        Up, Down, Left, Right // 0, 1, 2, 3
+    }
 
     class Player
     {
@@ -22,18 +24,74 @@ namespace Sokoban
 
         private Game1 game; //reference from Game1 to Player
         private bool keysReleased = true;
-        //public Direction direction = Direction.Down;
+        //private Texture2D[] sprites;
+        /*
+         * int x[,]; -> Matriz onde todas as linhas tem o mesmo tamanho
+
+         * int x[][ ]; -> Jagged array  (as linhas podem ter tamanhos diferentes)
+
+         */
+        private Texture2D[][] sprites;
+        public Direction direction = Direction.Down;
 
         //public Point Position
         //{
         //	get{return position;}
         //}
 
+
         public Player(Game1 game1, int x, int y) //constructor que dada a as posições guarda a sua posição
         {
             position = new Point(x, y);
             game = game1;
         }
+
+        public void LoadContents()
+        {
+            //sprites = Content.Load<Texture2D>("Character4");
+            //sprites = new Texture2D[4];
+            //sprites[(int)Direction.Up] = game.Content.Load<Texture2D>("Character7");
+            //sprites[(int)Direction.Down] = game.Content.Load<Texture2D>("Character4");
+            //sprites[(int)Direction.Left] = game.Content.Load<Texture2D>("Character1");
+            //sprites[(int)Direction.Right] = game.Content.Load<Texture2D>("Character2");
+
+            sprites = new Texture2D[4][];
+            sprites[(int)Direction.Up] = new[]
+            {
+                game.Content.Load<Texture2D>("Character7"),
+                game.Content.Load<Texture2D>("Character8"),
+                game.Content.Load<Texture2D>("Character9")
+            };
+            sprites[(int)Direction.Down] = new[]
+            {
+                game.Content.Load<Texture2D>("Character4"),
+                game.Content.Load<Texture2D>("Character5"),
+                game.Content.Load<Texture2D>("Character6")
+
+            };
+
+            sprites[(int)Direction.Left] = new[]
+            {
+                game.Content.Load<Texture2D>("Character1"),
+                game.Content.Load<Texture2D>("Character10"),
+
+            };
+            sprites[(int)Direction.Right] = new[] 
+            { 
+                game.Content.Load<Texture2D>("Character2"), 
+                game.Content.Load<Texture2D>("Character3") 
+            };
+        }
+
+        public void Draw(SpriteBatch sb)
+        {
+            Rectangle rect = new Rectangle(game.tileSize * position.X,
+                                           game.tileSize * position.Y,
+                                           game.tileSize, game.tileSize);
+
+            sb.Draw(sprites[(int)direction][0], rect, Color.White); //desenha o Player
+        }
+
 
         public void Update(GameTime gameTime)
         {
@@ -50,22 +108,24 @@ namespace Sokoban
                 if ((kState.IsKeyDown(Keys.A)) || (kState.IsKeyDown(Keys.Left)))
                 {
                     position.X--;
-                    game.direction = Direction.Left;
+                    //game.direction = Direction.Left;
+                    direction = Direction.Left;
                 }
                 else if ((kState.IsKeyDown(Keys.W)) || (kState.IsKeyDown(Keys.Up)))
                 {
                     position.Y--;
-                    game.direction = Direction.Up;
+                    //game.direction = Direction.Up;
+                    direction = Direction.Up;
                 }
                 else if ((kState.IsKeyDown(Keys.S)) || (kState.IsKeyDown(Keys.Down)))
                 {
                     position.Y++;
-                    game.direction = Direction.Down;
+                    direction = Direction.Down;
                 }
                 else if ((kState.IsKeyDown(Keys.D)) || (kState.IsKeyDown(Keys.Right)))
                 {
                     position.X++;
-                    game.direction = Direction.Right;
+                    direction = Direction.Right;
                 }
                 else keysReleased = true;
                 // destino é caixa?
