@@ -7526,23 +7526,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\David\\.nuget\\packages\\": {},
+    "C:\\Users\\fonte\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\IPCA\\1º Ano\\2º Semestre\\TDV\\Repositório stor\\FirstProject\\Sokoban\\Sokoban.csproj",
+      "projectUniqueName": "C:\\Users\\fonte\\OneDrive - Instituto Politécnico do Cávado e do Ave\\ipca\\Tecnica de desenvolvimento de videojogos\\GitHub\\IPCATDVJ2425\\FirstProject\\Sokoban\\Sokoban.csproj",
       "projectName": "Sokoban",
-      "projectPath": "C:\\IPCA\\1º Ano\\2º Semestre\\TDV\\Repositório stor\\FirstProject\\Sokoban\\Sokoban.csproj",
-      "packagesPath": "C:\\Users\\David\\.nuget\\packages\\",
-      "outputPath": "C:\\IPCA\\1º Ano\\2º Semestre\\TDV\\Repositório stor\\FirstProject\\Sokoban\\obj\\",
+      "projectPath": "C:\\Users\\fonte\\OneDrive - Instituto Politécnico do Cávado e do Ave\\ipca\\Tecnica de desenvolvimento de videojogos\\GitHub\\IPCATDVJ2425\\FirstProject\\Sokoban\\Sokoban.csproj",
+      "packagesPath": "C:\\Users\\fonte\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\fonte\\OneDrive - Instituto Politécnico do Cávado e do Ave\\ipca\\Tecnica de desenvolvimento de videojogos\\GitHub\\IPCATDVJ2425\\FirstProject\\Sokoban\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\David\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\fonte\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -7551,6 +7551,7 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
