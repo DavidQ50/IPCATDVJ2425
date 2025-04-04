@@ -28,7 +28,7 @@ public class Game1 : Game
     public int tileSize = 64; //potencias de 2 (operações binárias)
     private Player sokoban;
     public List<Point> boxes;
-    public Direction direction = Direction.Down;
+    //public Direction direction = Direction.Down;
 
     public Game1()
     {
@@ -43,7 +43,7 @@ public class Game1 : Game
 
         LoadLevel("level1.txt");
 
-        _graphics.PreferredBackBufferHeight = tileSize * level.GetLength(1); //definição da altura
+        _graphics.PreferredBackBufferHeight = tileSize * (1+level.GetLength(1)); //definição da altura
         _graphics.PreferredBackBufferWidth = tileSize * level.GetLength(0); //definição da largura
         _graphics.ApplyChanges(); //aplica a atualização da janela
 
@@ -94,7 +94,18 @@ public class Game1 : Game
 
         // TODO: Add your drawing code here
         _spriteBatch.Begin();
-        _spriteBatch.DrawString(font, "O texto que quiser", new Vector2(10, 10), Color.White);
+        // Draw UI
+        _spriteBatch.DrawString(font, // Tipo de letra
+                                "Tempo Decorrido = ",  // Texto
+                                new Vector2(5, level.GetLength(1) * tileSize + 5), // Posição do texto
+                                Color.White, // Cor da letra
+                                0f, //Rotação
+                                Vector2.Zero, // Origem (0,0)
+                                2f, // Escala
+                                SpriteEffects.None, //Sprite effect (FlipHorizontally)
+                                0); // Ordenar sprites
+
+        //priteBatch.DrawString(font, "O texto que quiser", new Vector2(10, 10), Color.White);
         //_spriteBatch.DrawString(font, "O texto que quiser", new Vector2(100, 300), Color.Black);
         Rectangle position = new Rectangle(0, 0, tileSize, tileSize); //calculo do retangulo a depender do tileSize
         for (int x = 0; x < level.GetLength(0); x++)  //pega a primeira dimensão
