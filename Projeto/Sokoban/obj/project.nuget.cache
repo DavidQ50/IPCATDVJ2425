@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Bqm0xeYDCJI=",
+  "dgSpecHash": "SH+ZOBQZZjY=",
   "success": true,
-  "projectFilePath": "C:\\Users\\fonte\\OneDrive - Instituto Politécnico do Cávado e do Ave\\ipca\\Tecnica de desenvolvimento de videojogos\\GitHub\\IPCATDVJ2425\\FirstProject\\Sokoban\\Sokoban.csproj",
+  "projectFilePath": "C:\\Users\\fonte\\OneDrive - Instituto Politécnico do Cávado e do Ave\\ipca\\Tecnica de desenvolvimento de videojogos\\GitHub\\IPCATDVJ2425\\Projeto\\Sokoban\\Sokoban.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\fonte\\.nuget\\packages\\libuv\\1.9.1\\libuv.1.9.1.nupkg.sha512",
     "C:\\Users\\fonte\\.nuget\\packages\\microsoft.codeanalysis.analyzers\\1.1.0\\microsoft.codeanalysis.analyzers.1.1.0.nupkg.sha512",
