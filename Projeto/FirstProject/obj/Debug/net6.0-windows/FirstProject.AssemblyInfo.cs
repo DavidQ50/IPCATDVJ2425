@@ -14,7 +14,11 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("FirstProject")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
+<<<<<<< Updated upstream:Projeto/FirstProject/obj/Debug/net6.0-windows/FirstProject.AssemblyInfo.cs
 [assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ace6e7db869fa3a80c89ced98c2eb594b9801d05")]
+=======
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c4adccb3fdaebf1ff5872a6bb31a080f07a46748")]
+>>>>>>> Stashed changes:FirstProject/FirstProject/obj/Debug/net6.0-windows/FirstProject.AssemblyInfo.cs
 [assembly: System.Reflection.AssemblyProductAttribute("FirstProject")]
 [assembly: System.Reflection.AssemblyTitleAttribute("FirstProject")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

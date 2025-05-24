@@ -14,7 +14,11 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Sokoban")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
+<<<<<<< Updated upstream:Projeto/Sokoban/obj/Debug/net6.0-windows/Sokoban.AssemblyInfo.cs
 [assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1ecb17f83d0a1a437478ccde7f768c952d26899a")]
+=======
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c4adccb3fdaebf1ff5872a6bb31a080f07a46748")]
+>>>>>>> Stashed changes:FirstProject/Sokoban/obj/Debug/net6.0-windows/Sokoban.AssemblyInfo.cs
 [assembly: System.Reflection.AssemblyProductAttribute("Sokoban")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Sokoban")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
