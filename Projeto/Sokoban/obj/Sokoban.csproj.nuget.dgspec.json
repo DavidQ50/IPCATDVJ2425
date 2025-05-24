@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\fonte\\OneDrive - Instituto Politécnico do Cávado e do Ave\\ipca\\Tecnica de desenvolvimento de videojogos\\GitHub\\IPCATDVJ2425\\Projeto\\Sokoban\\Sokoban.csproj": {}
+    "C:\\IPCA\\1º Ano\\2º Semestre\\TDV\\Repositório stor\\Projeto\\Sokoban\\Sokoban.csproj": {}
   },
   "projects": {
-    "C:\\Users\\fonte\\OneDrive - Instituto Politécnico do Cávado e do Ave\\ipca\\Tecnica de desenvolvimento de videojogos\\GitHub\\IPCATDVJ2425\\Projeto\\Sokoban\\Sokoban.csproj": {
+    "C:\\IPCA\\1º Ano\\2º Semestre\\TDV\\Repositório stor\\Projeto\\Sokoban\\Sokoban.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\fonte\\OneDrive - Instituto Politécnico do Cávado e do Ave\\ipca\\Tecnica de desenvolvimento de videojogos\\GitHub\\IPCATDVJ2425\\Projeto\\Sokoban\\Sokoban.csproj",
+        "projectUniqueName": "C:\\IPCA\\1º Ano\\2º Semestre\\TDV\\Repositório stor\\Projeto\\Sokoban\\Sokoban.csproj",
         "projectName": "Sokoban",
-        "projectPath": "C:\\Users\\fonte\\OneDrive - Instituto Politécnico do Cávado e do Ave\\ipca\\Tecnica de desenvolvimento de videojogos\\GitHub\\IPCATDVJ2425\\Projeto\\Sokoban\\Sokoban.csproj",
-        "packagesPath": "C:\\Users\\fonte\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\fonte\\OneDrive - Instituto Politécnico do Cávado e do Ave\\ipca\\Tecnica de desenvolvimento de videojogos\\GitHub\\IPCATDVJ2425\\Projeto\\Sokoban\\obj\\",
+        "projectPath": "C:\\IPCA\\1º Ano\\2º Semestre\\TDV\\Repositório stor\\Projeto\\Sokoban\\Sokoban.csproj",
+        "packagesPath": "C:\\Users\\David\\.nuget\\packages\\",
+        "outputPath": "C:\\IPCA\\1º Ano\\2º Semestre\\TDV\\Repositório stor\\Projeto\\Sokoban\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\fonte\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\David\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -79,7 +79,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.200\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.201\\RuntimeIdentifierGraph.json"
         }
       }
     }
